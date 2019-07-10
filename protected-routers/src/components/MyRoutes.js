@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router, Route, Link } from 'react-router-dom';
+import { Switch, Route, Link } from 'react-router-dom';
 import PrivateRoute from './PrivateRoute';
 import Public from './Public';
 import Login from './Login';
@@ -8,7 +8,7 @@ import SignOut from './SignOut';
 
 function MyRoutes () {
     return(
-        <Router>
+        <Switch>
             <div>
                 <SignOut/>
                 <ul>
@@ -19,7 +19,7 @@ function MyRoutes () {
                 <Route path="/login" component={Login}/>
                 <PrivateRoute path="/protected" component={Protected} />
             </div>
-        </Router>
+        </Switch>
     )
 }
 

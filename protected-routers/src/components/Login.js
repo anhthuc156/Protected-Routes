@@ -22,7 +22,7 @@ class Login extends React.Component{
         
         let { from } = this.props.location.state || { from: { pathname: '/' } };
         let { redirectRef } = this.state;
-        debugger
+        
         if (redirectRef === true) {
             return (
                 <Redirect to={from} />
